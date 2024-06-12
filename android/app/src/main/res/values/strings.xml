@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Rubik\'s Race</string>
+    <string name="title_activity_main">Rubik\'s Race</string>
+    <string name="package_name">rubik.s.race</string>
+    <string name="custom_url_scheme">rubik.s.race</string>
+</resources>

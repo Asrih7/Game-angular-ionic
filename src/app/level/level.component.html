@@ -1,0 +1,38 @@
+<div class="heading">
+  <h1 class="title">1000 Levels</h1>
+</div>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ng-container *ngFor="let level of levels; let i = index">
+        <ion-col size="3">
+          <div class="level-container" [class.locked]="level.locked">
+            <div class="lock-icon" *ngIf="level.locked"></div>
+            <div class="level" [attr.aria-disabled]="level.locked ? true : null">
+              Level {{ currentPage * levelsPerPage + i + 1 }}
+            </div>
+            <div class="best" [class.locked]="level.locked">Score {{ level.bestScore }}</div>
+          </div>
+        </ion-col>
+      </ng-container>
+    </ion-row>
+  </ion-grid>
+  <mat-paginator [length]="totalLevels"
+    [showFirstLastButtons]="showFirstLastButtons"
+
+  [pageSize]="levelsPerPage"
+  [pageSizeOptions]="[20]"
+  (page)="goToPage($event.pageIndex)"
+  [disabled]="isNextDisabled()">
+</mat-paginator>
+
+
+
+
+
+
+
+</ion-content>
+
+

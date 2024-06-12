@@ -1,0 +1,7 @@
+{
+  "name": "rubik-s-race",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
